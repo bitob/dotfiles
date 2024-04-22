@@ -5,11 +5,10 @@
   CPow/Typecraft: https://github.com/cpow/cpow-dotfiles/tree/master, https://github.com/cpow/neovim-for-newbs/tree/main
 ]]
 
-
 -- don't auto load netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.g.netrw_liststyöe = 3 -- use tree style in netrw
+vim.g.netrw_liststyle = 3 -- use tree style in netrw
 
 require("bitob.core")
 require("bitob.lazy")

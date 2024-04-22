@@ -21,7 +21,6 @@ opt.cursorline = true -- highlight the screen line of the cursor with CursorLine
 opt.autowrite = true -- don't automatically save the current file before running certain commands, like ':make' and ':grep'
 opt.autoread = true -- automatically re-read files if unmodified inside Vim when they have been changed outside of Vim
 
-
 opt.termguicolors = true -- enable true color (24 bit) support
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift

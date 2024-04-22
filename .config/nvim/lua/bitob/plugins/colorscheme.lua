@@ -3,7 +3,7 @@ return {
 	priority = 1000,
 	config = function()
 		-- Call the setup function with your specified opts
-		require('gruvbox').setup({
+		require("gruvbox").setup({
 			terminal_colors = true, -- add neovim terminal colors
 			undercurl = true,
 			underline = true,
