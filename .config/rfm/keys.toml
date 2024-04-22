@@ -1,0 +1,67 @@
+# Basic configuration of rfm
+#
+# The syntax is pretty simple:
+#
+# [category]
+# command = [ "k" , "sk", "thirdkeybinding" ]
+#    ^        ^^^   ^^^^   ^^^^^^^^^^^^^^^^^
+#    |      single   |       or even words
+#    |       key   multiple
+#    |              keys
+#    |
+# Name of the command
+
+[general]
+search        = [ "/", "search", "f" ]
+mark          = [ " " ]
+next          = [ "n" ]
+previous      = [ "N" ]
+view_trash    = [ "gT" ]
+toggle_hidden = [ "zh" ]
+toggle_log    = [ "devlog" ]
+quit          = [ "q", "Q", "exit" ]
+quit_no_cd    = [ "alt-q" ]
+
+[movement]
+up                 = [ "k" ]
+down               = [ "j" ]
+left               = [ "h" ]
+right              = [ "l" ]
+top                = [ "gg" ]
+bottom             = [ "G" ]
+page_forward       = [ "ctrl-f" ]
+page_backward      = [ "ctrl-b" ]
+half_page_forward  = [ "ctrl-d" ]
+half_page_backward = [ "ctrl-u" ]
+jump_previous      = [ "''" ]
+#
+# You can define custom jumpmarks.
+#
+# On the left side, you put the keybinding or key-combination,
+# and on the right side, the directory you want to jump into.
+# You can use "~" for "$HOME".
+#
+jump_to = [ ["gh", "~"],
+            ["gp", "~/projects"],
+            ["gs", "~/serum"],
+            ["gb", "~/bash_me_daddy"],
+            ["gc", "~/.config"],
+            ["gs", "~/.scripts"],
+            ["gP", "~/Pictures"],
+            ["gd", "~/Documents"],
+            ["gD", "~/Downloads"],
+            ["gm", "~/Music"],
+            ["gr", "/"],
+            ["ge", "/etc"],
+            ["gu", "/usr"]]
+
+[manipulation]
+change_directory = [ "cd" ]
+rename           = [ "rename" ]
+mkdir            = [ "mkdir" ]
+touch            = [ "touch" ]
+cut              = [ "cut", "dd", "ctrl-x" ]
+copy             = [ "copy", "yy", "ctrl-c" ]
+delete           = [ "delete" ]
+paste            = [ "paste", "pp", "ctrl+v" ]
+paste_overwrite  = [ "po", "ctrl+V" ]
