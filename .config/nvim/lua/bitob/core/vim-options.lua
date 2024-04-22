@@ -2,6 +2,7 @@ local opt = vim.opt
 
 opt.number = true -- enable line number globally
 opt.relativenumber = true -- use relative line numbers
+opt.scrolloff = 16 -- always (if possible) leave 16 lines around the cursor
 
 -- tabs & indentation
 opt.tabstop = 4 -- 4 spaces for tabs (rustfmt default)
