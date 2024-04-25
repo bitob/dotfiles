@@ -17,7 +17,7 @@ mark          = [ " " ]
 next          = [ "n" ]
 previous      = [ "N" ]
 view_trash    = [ "gT" ]
-toggle_hidden = [ "zh" ]
+toggle_hidden = [ "zh", "H" ]
 toggle_log    = [ "devlog" ]
 quit          = [ "q", "Q", "exit" ]
 quit_no_cd    = [ "alt-q" ]
@@ -43,10 +43,9 @@ jump_previous      = [ "''" ]
 #
 jump_to = [ ["gh", "~"],
             ["gp", "~/projects"],
-            ["gs", "~/serum"],
+            ["gs", "~/projects/serum"],
             ["gb", "~/bash_me_daddy"],
             ["gc", "~/.config"],
-            ["gs", "~/.scripts"],
             ["gP", "~/Pictures"],
             ["gd", "~/Documents"],
             ["gD", "~/Downloads"],
