@@ -6,6 +6,10 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" })
 
+keymap.set("n", "<CR>", "o<ESC>", { noremap = true, silent = true, desc = "Insert blank line below" })
+-- TODO: This won't work, probably because the terminal doesn't recognize Shift + Enter correctly
+keymap.set("n", "<S-CR>", "O<ESC>", { noremap = true, silent = true, desc = "Insert blank line above" })
+
 keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- increment/decrement numbers
@@ -30,4 +34,3 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 -- keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 -- keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 -- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
-
