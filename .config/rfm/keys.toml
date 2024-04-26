@@ -52,7 +52,7 @@ jump_to = [ ["gh", "~"],
             ["gm", "~/Music"],
             ["gr", "/"],
             ["ge", "/etc"],
-            ["gu", "/usr"]]
+            ["gu", "/usr"],]
 
 [manipulation]
 change_directory = [ "cd" ]
@@ -64,3 +64,6 @@ copy             = [ "copy", "yy", "ctrl-c" ]
 delete           = [ "delete" ]
 paste            = [ "paste", "pp", "ctrl+v" ]
 paste_overwrite  = [ "po", "ctrl+V" ]
+zip              = [ "zip" ]
+tar              = [ "tar" ]
+extract          = [ "extract", "unzip" ]
