@@ -62,6 +62,15 @@ return {
 				opts.desc = "Show documentation for what is under cursor"
 				-- keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 				keymap.set("n", "<leader>ll", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+
+				opts.desc = "Toggle Inlay Hintes"
+				keymap.set("n", "<leader>lh", function()
+					if vim.lsp.inlay_hint.is_enabled() then
+						vim.lsp.inlay_hint.enable(false)
+					else
+						vim.lsp.inlay_hint.enable(true)
+					end
+				end, opts)
 			end,
 		})
 
