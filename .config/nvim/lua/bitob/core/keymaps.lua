@@ -34,3 +34,12 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 -- keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 -- keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 -- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+keymap.set("n", "<leader>io", "i\
+// Copyright Open Logistics Foundation\
+//\
+// Licensed under the Open Logistics Foundation License 1.3.\
+// For details on the licensing terms, see the LICENSE file.\
+// SPDX-License-Identifier: OLFL-1.3\
+//\
+<ESC>", { desc = "Insert OLFL-1.3 License Header" })

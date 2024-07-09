@@ -18,6 +18,7 @@ require("lazy").setup(
 		{ import = "bitob.plugins" },
 		-- { import = "bitob.plugins.colorscheme" },
 		{ import = "bitob.plugins.lsp" },
+		{ import = "bitob.plugins.mini" },
 	},
 	-- table of options for lazy loading behavior
 	{
