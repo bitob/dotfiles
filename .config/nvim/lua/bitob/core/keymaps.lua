@@ -18,7 +18,7 @@ keymap.set("n", "<CR>", "o<ESC>", { noremap = true, silent = true, desc = "Inser
 -- TODO: This won't work, probably because the terminal doesn't recognize Shift + Enter correctly
 keymap.set("n", "<S-CR>", "O<ESC>", { noremap = true, silent = true, desc = "Insert blank line above" })
 
-keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<leader><leader>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 keymap.set(
 	"n",
