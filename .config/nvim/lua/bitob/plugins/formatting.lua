@@ -9,6 +9,7 @@ return {
 				lua = { "stylua" },
 				rust = { "rustanalyzer" },
 				c = { "clang-format" },
+				cpp = { "clang-format" },
 				markdown = { "prettier" },
 				json = { "prettier" },
 				yaml = { "prettier" },
@@ -16,7 +17,17 @@ return {
 				-- sh = { "shfmt" },
 				sh = { "beautysh" },
 			},
-			format_on_save = false,
+			formatters = {
+				clang_format = {
+					command = "clangd",
+					args = {
+						"--format-style=file",
+						vim.fn.expand("%:h") .. "/.clang-format",
+						"--fallback-style=Google",
+					},
+				},
+			},
+			format_on_save = nil,
 			-- format_on_save = {
 			-- 	lsp_fallback = true,
 			-- 	async = false,
