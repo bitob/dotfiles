@@ -72,7 +72,6 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  ag
   aliases
 #  autoenv
 #  battery
@@ -91,7 +90,6 @@ plugins=(
 #  direnv
   emoji
   extract
-  fd
   fzf
   # git-auto-fetch
 #  gitignore
@@ -112,7 +110,6 @@ plugins=(
   python
   qrcode
   rand-quote
-  ripgrep
   rsync
   rust
   safe-paste
@@ -228,7 +225,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-alias gac="git add . && git commit -a -m "
+alias gac="git commit -a -m "
 alias gs="git status"
 alias gsu="git status --untracked-files"
 alias gccd='foo(){ git clone "$1"; cd "$1" }; foo '
@@ -255,6 +252,8 @@ alias pls="sudo"
 export NIX_REMOTE=daemon
 
 export NIXPKGS_ALLOW_UNFREE=1
+
+export CPM_SOURCE_CACHE=$HOME/.cache/CPM
 
 # This function is triggered when the terminal window is resized
 TRAPWINCH () {
@@ -286,14 +285,16 @@ zle -N execute-with-bang-bang
 bindkey '^M' execute-with-bang-bang
 
 # Source all files from .work_env directory
-if [ -d ".work_env" ]; then
+if [ -d "$HOME/.work_env" ]; then
     # Source every file in the directory
-    for file in ".work_env"/*; do
+    for file in "$HOME/.work_env"/*; do
         if [ -f "$file" ]; then
             source "$file"
         fi
     done
 fi
+
+eval "$(srgn --completions zsh)"
 
 fortune -cs | sed "s/%//" | cowsay
 #neofetch
