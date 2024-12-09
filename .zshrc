@@ -90,6 +90,7 @@ plugins=(
 #  direnv
   emoji
   extract
+  fast-syntax-highlighting
   fzf
   # git-auto-fetch
 #  gitignore
@@ -136,12 +137,14 @@ plugins=(
   web-search
   zbell
   zoxide
+  zsh-autocomplete
   zsh-autosuggestions
-  zsh_codex
+  # zsh_codex
   zsh-interactive-cd
+  zsh-syntax-highlighting
 #  zsh-navigation-tools
 )
-bindkey '^X' create_completion # zsh_codex completion
+# bindkey '^X' create_completion # zsh_codex completion
 
 source $ZSH/oh-my-zsh.sh
 
