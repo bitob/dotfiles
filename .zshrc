@@ -209,8 +209,8 @@ alias nv="nvim"
 alias rfm="rfm-cd"
 alias r="rfm"
 
-alias ls='exa'
-alias ll='exa --icons -l'
+alias ls='eza'
+alias ll='eza --icons -l'
 alias la='ll -a'
 
 alias grep='rg'
@@ -299,4 +299,4 @@ eval "$(srgn --completions zsh)"
 fortune -cs | sed "s/%//" | cowsay
 #neofetch
 
-setxkbmap -layout decode -variant de
+# setxkbmap -layout decode -variant de
